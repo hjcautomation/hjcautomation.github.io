@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>HJC Automation | Custom Scripts for Small Businesses</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/lucide@latest"></script>
+      <style>
+         body {
+         font-family: 'Inter', sans-serif;
+         background-color: #f8fafc; /* slate-50 */
+         color: #1e293b; /* slate-800 */
+         }
+         .font-poppins {
+         font-family: 'Poppins', sans-serif;
+         }
+         .gradient-bg {
+         background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.05), transparent 35%),
+         radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.05), transparent 35%);
+         }
+         .content-card {
+         background-color: #ffffff; /* white */
+         border: 1px solid #e2e8f0; /* slate-200 */
+         }
+         .feature-card {
+         background-color: #ffffff; /* white */
+         border: 1px solid #e2e8f0; /* slate-200 */
+         }
+         .feature-card:hover .feature-icon {
+         transform: scale(1.1);
+         box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+         }
+         .star-gold {
+         color: #FFC107;
+         }
+         /* Add this to your existing 
+      <style>
+         tag or create a new one in the 
+         <head> */
+            .timeline-node {
+            width: 1.25rem; /* 20px */
+            height: 1.25rem; /* 20px */
+            border-width: 3px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f8fafc; /* bg-slate-50 */
+            }
+            .timeline-node.top { top: 4rem; }
+            .timeline-node.middle { top: 50%; transform: translate(-50%, -50%);}
+            .timeline-node.bottom { bottom: 4rem; }
+            /* A simple animation for when cards scroll into view */
+            .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            }
+      </style>
+   </head>
+   <body class="gradient-bg">
+      <!-- Header -->
+      <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+         <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+               <div class="text-2xl font-bold font-poppins text-slate-900">
+                  HJC <span class="text-blue-600">Automation</span>
+               </div>
+               <nav class="hidden md:flex items-center space-x-8">
+                  <a href="#services" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                  <a href="#how-it-works" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">How It Works</a>
+                  <a href="#testimonials" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
+                  <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">Get a Free Quote</a>
+               </nav>
+               <button id="mobile-menu-button" class="md:hidden text-slate-800">
+               <i data-lucide="menu"></i>
+               </button>
+            </div>
+         </div>
+         <!-- Mobile Menu -->
+         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-white/95 backdrop-blur-md">
+            <a href="#services" class="block py-2 text-slate-600 hover:text-blue-600">Services</a>
+            <a href="#how-it-works" class="block py-2 text-slate-600 hover:text-blue-600">How It Works</a>
+            <a href="#testimonials" class="block py-2 text-slate-600 hover:text-blue-600">Testimonials</a>
+            <a href="#contact" class="block mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-center">Get a Free Quote</a>
+         </div>
+      </header>
+      <!-- Hero Section -->
+      <main class="pt-24">
+         <section class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <div class="max-w-4xl mx-auto">
+               <h1 class="text-4xl md:text-6xl font-poppins font-bold text-slate-900 leading-tight">
+                  Stop Drowning in Busywork. <br class="hidden md:block">
+                  <span class="block mt-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">Automate Your Workflow.</span>
+               </h1>
+               <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+                  We build custom, no-fuss automation scripts for small businesses. Save countless hours on spreadsheets, emails, and repetitive tasks—no technical expertise required on your end.
+               </p>
+               <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                  <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-blue-500/20">
+                  Automate My Business
+                  </a>
+                  <a href="#how-it-works" class="w-full sm:w-auto border-2 border-slate-300 hover:bg-slate-100 text-slate-700 font-medium py-3 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                  </a>
+               </div>
+            </div>
+         </section>
+         <!-- Services Section -->
+         <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+               <div class="text-center mb-16">
+                  <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Your Personal Tech Department</h2>
+                  <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">We handle the code, you reap the benefits. Here's how we can help:</p>
+               </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <!-- Service Card 1 -->
+                  <div class="feature-card p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-2">
+                     <div class="feature-icon bg-slate-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg transition-all duration-300">
+                        <i data-lucide="sheet" class="w-8 h-8"></i>
+                     </div>
+                     <h3 class="text-2xl font-bold font-poppins text-slate-800 mb-3">Spreadsheet Automation</h3>
+                     <p class="text-slate-600">Tired of complex formulas and manual data entry in Excel or Google Sheets? We'll create scripts to sort, filter, format, and generate reports automatically.</p>
+                  </div>
+                  <!-- Service Card 2 -->
+                  <div class="feature-card p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-2">
+                     <div class="feature-icon bg-slate-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg transition-all duration-300">
+                        <i data-lucide="send" class="w-8 h-8"></i>
+                     </div>
+                     <h3 class="text-2xl font-bold font-poppins text-slate-800 mb-3">Email & Outreach</h3>
+                     <p class="text-slate-600">Automate personalized email campaigns, follow-ups, and notifications. Perfect for sales, marketing, and customer service outreach without the manual effort.</p>
+                  </div>
+                  <!-- Service Card 3 -->
+                  <div class="feature-card p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-2">
+                     <div class="feature-icon bg-slate-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg transition-all duration-300">
+                        <i data-lucide="database" class="w-8 h-8"></i>
+                     </div>
+                     <h3 class="text-2xl font-bold font-poppins text-slate-800 mb-3">Data Scraping & Entry</h3>
+                     <p class="text-slate-600">Need to gather information from websites or move data between applications? Our scripts can extract and input data accurately, 24/7.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- How It Works Section -->
+         <section id="how-it-works" class="py-20">
+            <div class="container mx-auto px-6">
+               <div class="text-center mb-16">
+                  <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Effortless Automation in 3 Steps</h2>
+                  <p class="mt-4 text-lg text-slate-600">From concept to completion, we make it simple.</p>
+               </div>
+               <div class="relative max-w-4xl mx-auto">
+                  <div class="hidden md:block absolute top-16 left-1/2 w-0.5 h-[calc(100%-8rem)] -translate-x-1/2 bg-slate-200"></div>
+                  <div class="hidden md:block">
+                     <div class="timeline-node top border-blue-500 rounded-full"></div>
+                     <div class="timeline-node middle border-blue-500 rounded-full"></div>
+                     <div class="timeline-node bottom border-blue-500 rounded-full"></div>
+                  </div>
+                  <div class="md:flex items-center justify-start mb-16 relative z-10">
+                     <div class="md:w-1/2 md:pr-8">
+                        <div class="fade-in-up content-card p-8 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:-translate-y-2">
+                           <div class="flex items-start gap-6">
+                              <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center">
+                                 <i data-lucide="message-square-text" class="w-8 h-8"></i>
+                              </div>
+                              <div>
+                                 <span class="font-poppins font-bold text-slate-400">STEP 01</span>
+                                 <h3 class="text-2xl font-poppins font-bold text-slate-800 mt-1 mb-3">Free Consultation</h3>
+                                 <p class="text-slate-600">We'll chat about your current workflow, identify the bottlenecks, and map out a clear automation strategy. No obligations, just solutions.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="md:flex items-center justify-end mb-16 relative z-10">
+                     <div class="md:w-1/2 md:pl-8">
+                        <div class="fade-in-up content-card p-8 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:-translate-y-2">
+                           <div class="flex items-start gap-6">
+                              <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center">
+                                 <i data-lucide="code-2" class="w-8 h-8"></i>
+                              </div>
+                              <div>
+                                 <span class="font-poppins font-bold text-slate-400">STEP 02</span>
+                                 <h3 class="text-2xl font-poppins font-bold text-slate-800 mt-1 mb-3">Script Development</h3>
+                                 <p class="text-slate-600">Our developers get to work, coding your custom script. We focus on creating efficient, reliable, and secure code tailored to your exact needs.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="md:flex items-center justify-start relative z-10">
+                     <div class="md:w-1/2 md:pr-8">
+                        <div class="fade-in-up content-card p-8 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:-translate-y-2">
+                           <div class="flex items-start gap-6">
+                              <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center">
+                                 <i data-lucide="rocket" class="w-8 h-8"></i>
+                              </div>
+                              <div>
+                                 <span class="font-poppins font-bold text-slate-400">STEP 03</span>
+                                 <h3 class="text-2xl font-poppins font-bold text-slate-800 mt-1 mb-3">Delivery & Support</h3>
+                                 <p class="text-slate-600">We deliver your script, help you implement it, and ensure it runs smoothly. We're here for any questions or future adjustments you may need.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                
+            
+                // Other scripts like lucide.createIcons() can also go here
+                // ...
+            });
+         </script>
+         <!-- Testimonials Section -->
+         <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+               <div class="text-center mb-16">
+                  <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Loved by Businesses Like Yours</h2>
+                  <p class="mt-4 text-lg text-slate-600">Don't just take our word for it. Here's what our clients say.</p>
+               </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <!-- Testimonial 1 -->
+                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                     </div>
+                     <p class="text-slate-600 mb-6 flex-grow">"HJC Automation saved my team at least 10 hours a week. The script they built for our inventory spreadsheets is flawless and has completely eliminated human error. Worth every penny."</p>
+                     <div>
+                        <p class="font-bold text-slate-800">Sarah Johnson</p>
+                        <p class="text-sm text-slate-500">Owner, The Local Boutique</p>
+                     </div>
+                  </div>
+                  <!-- Testimonial 2 -->
+                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                     </div>
+                     <p class="text-slate-600 mb-6 flex-grow">"I'm not a tech person, and the thought of 'automation' was intimidating. The team at HJC explained everything clearly and delivered a simple solution that automated my client outreach. Game-changer."</p>
+                     <div>
+                        <p class="font-bold text-slate-800">Michael Chen</p>
+                        <p class="text-sm text-slate-500">Financial Advisor</p>
+                     </div>
+                  </div>
+                  <!-- Testimonial 3 -->
+                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                     </div>
+                     <p class="text-slate-600 mb-6 flex-grow">"The communication was fantastic from start to finish. They built a custom web scraper that saves us hours of manual data collection every single day. Highly recommend their services."</p>
+                     <div>
+                        <p class="font-bold text-slate-800">Jessica Rodriguez</p>
+                        <p class="text-sm text-slate-500">Marketing Lead, Innovate Realty</p>
+                     </div>
+                  </div>
+                  <!-- Testimonial 4 -->
+                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                     </div>
+                     <p class="text-slate-600 mb-6 flex-grow">"Our reporting process used to take a full day. Now, it's done in minutes with a single click. The efficiency gains are incredible. Thank you, HJC Automation!"</p>
+                     <div>
+                        <p class="font-bold text-slate-800">David Lee</p>
+                        <p class="text-sm text-slate-500">Operations Manager, Growth Corp.</p>
+                     </div>
+                  </div>
+                  <!-- Testimonial 5 -->
+                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                     </div>
+                     <p class="text-slate-600 mb-6 flex-grow">"As a solo entrepreneur, I wear many hats. The email automation script they developed for me feels like I've hired a new team member. It's been essential for scaling my business."</p>
+                     <div>
+                        <p class="font-bold text-slate-800">Emily Carter</p>
+                        <p class="text-sm text-slate-500">Founder, Carter Creative Co.</p>
+                     </div>
+                  </div>
+                  <!-- Testimonial 6 -->
+                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
+                     <div class="flex items-center mb-4">
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
+                     </div>
+                     <p class="text-slate-600 mb-6 flex-grow">"Reliable, professional, and incredibly skilled. The script works perfectly, and their support has been top-notch. I couldn't be happier with the result."</p>
+                     <div>
+                        <p class="font-bold text-slate-800">Mark Thompson</p>
+                        <p class="text-sm text-slate-500">Director, Apex Logistics</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Contact Section -->
+         <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+               <div class="bg-white rounded-2xl p-8 md:p-12 lg:p-16 border border-slate-200 shadow-lg">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                     <div>
+                        <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Ready to Reclaim Your Time?</h2>
+                        <p class="mt-4 text-lg text-slate-600">Let's talk about how a simple script can transform your business. Fill out the form, and we'll be in touch to schedule your free, no-pressure consultation.</p>
+                        <div class="mt-8 space-y-4">
+                           <div class="flex items-center gap-4">
+                              <i data-lucide="clock" class="w-6 h-6 text-blue-500"></i>
+                              <span class="text-slate-700 font-medium">Save 10-20 hours per week</span>
+                           </div>
+                           <div class="flex items-center gap-4">
+                              <i data-lucide="target" class="w-6 h-6 text-blue-500"></i>
+                              <span class="text-slate-700 font-medium">Eliminate costly data entry errors</span>
+                           </div>
+                           <div class="flex items-center gap-4">
+                              <i data-lucide="zap" class="w-6 h-6 text-blue-500"></i>
+                              <span class="text-slate-700 font-medium">Focus on what truly grows your business</span>
+                           </div>
+                        </div>
+                     </div>
+                     <form>
+                        <div class="space-y-6">
+                           <div>
+                              <label for="name" class="block text-sm font-medium text-slate-600 mb-2">Full Name</label>
+                              <input type="text" id="name" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="John Doe">
+                           </div>
+                           <div>
+                              <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Email Address</label>
+                              <input type="email" id="email" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="you@company.com">
+                           </div>
+                           <div>
+                              <label for="message" class="block text-sm font-medium text-slate-600 mb-2">How can we help you?</label>
+                              <textarea id="message" rows="4" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 'I need to automate a report from an Excel file...'"></textarea>
+                           </div>
+                           <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-blue-500/20">
+                           Request My Free Consultation
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!-- Footer -->
+      <footer class="border-t border-slate-200">
+         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2025 HJC Automation. All rights reserved.</p>
+            <p class="text-sm mt-2">Empowering small businesses with technology, one script at a time.</p>
+         </div>
+      </footer>
+      <script>
+         /* Wait until the page DOM is fully parsed */
+         document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            /* ---------- 1. MOBILE MENU TOGGLE ---------- */
+            const menuBtn   = document.getElementById('mobile-menu-button');
+            const mobileNav = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileNav) {
+              menuBtn.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');                // show / hide menu
+
+                /* (optional) swap menu ↔️ close icon */
+                const iconEl = menuBtn.querySelector('i');
+                if (iconEl) {
+                  iconEl.setAttribute(
+                    'data-lucide',
+                    mobileNav.classList.contains('hidden') ? 'menu' : 'x'
+                  );
+                  lucide.createIcons();                              // re-render the new icon
+                }
+              });
+            }
+         
+           const observer = new IntersectionObserver(entries => {
+               entries.forEach(entry => {
+                   if (entry.isIntersecting) {
+                       entry.target.classList.add('is-visible');
+                   }
+               });
+           }, {
+               threshold: 0.1 // Trigger when 10% of the element is visible
+           });
+         
+           // Observe all elements with the .fade-in-up class
+           document.querySelectorAll('.fade-in-up').forEach(element => {
+               observer.observe(element);
+           });
+         
+           /* Grab the consultation form and its fields */
+           const form   = document.querySelector('#contact form');
+           if (!form) return;                                   // safety guard
+           const nameEl = form.querySelector('#name');
+           const mailEl = form.querySelector('#email');
+           const msgEl  = form.querySelector('#message');
+         
+           /* Build a reusable toast element (hidden by default) */
+           const toast = document.createElement('div');
+           toast.className = `
+             fixed bottom-6 right-6 z-50 bg-blue-600 text-white px-5 py-3 rounded-xl
+             shadow-lg opacity-0 pointer-events-none transform translate-y-4
+             transition-all duration-700
+           `.trim();
+           toast.textContent = '✅ Consultation requested! We’ll be in touch shortly.';
+           document.body.appendChild(toast);
+         
+           /* Your Discord channel webhook */
+           const WEBHOOK =
+             'https://discord.com/api/webhooks/1382175847510704290/WJdu8jo3q0Y2UNQ4Yy4I9KFXcsUgjOA4V7QPBtGLGfSAYEwBWLGywhEujr-WWS5WQGU_';
+         
+           /* Helper to show / hide the toast with custom text & colour */
+           function showToast(message, bgClass) {
+             toast.textContent = message;
+             toast.classList.remove('bg-blue-600', 'bg-red-600');
+             toast.classList.add(bgClass);
+             toast.classList.remove('opacity-0', 'translate-y-4');
+             toast.classList.add('opacity-100', 'translate-y-0');
+             setTimeout(() => {
+               toast.classList.add('opacity-0', 'translate-y-4');
+             }, 4000);
+           }
+         
+           /* Handle the submission */
+           form.addEventListener('submit', async (ev) => {
+             ev.preventDefault();
+         
+             const payload = {
+               content:
+                 `**New Consultation Request**\n` +
+                 `**Name:** ${nameEl.value.trim()}\n` +
+                 `**Email:** ${mailEl.value.trim()}\n` +
+                 `**Message:** ${msgEl.value.trim()}`,
+               allowed_mentions: { parse: ['everyone'] }
+             };
+         
+             try {
+               const res = await fetch(WEBHOOK, {
+                 method : 'POST',
+                 headers: { 'Content-Type': 'application/json' },
+                 body   : JSON.stringify(payload)
+               });
+         
+               if (!res.ok) throw new Error(`Discord replied ${res.status}`);
+               form.reset();
+               showToast('Consultation requested! We’ll be in touch shortly.', 'bg-blue-600');
+             } catch (err) {
+               console.error(err);
+               showToast('Sorry — something went wrong. Please try again.', 'bg-red-600');
+             }
+           });
+         });
+      </script>
+   </body>
+</html>
