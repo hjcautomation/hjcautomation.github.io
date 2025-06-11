@@ -434,8 +434,8 @@
            document.body.appendChild(toast);
          
            /* Your Discord channel webhook */
-           const WEBHOOK =
-             'https://discord.com/api/webhooks/1382175847510704290/WJdu8jo3q0Y2UNQ4Yy4I9KFXcsUgjOA4V7QPBtGLGfSAYEwBWLGywhEujr-WWS5WQGU_';
+           const ENDPOINT =
+             'https://gvy72iwrqonh7huqthuninl7ai0fblwp.lambda-url.us-east-2.on.aws/';
          
            /* Helper to show / hide the toast with custom text & colour */
            function showToast(message, bgClass) {
@@ -463,7 +463,7 @@
              };
          
              try {
-               const res = await fetch(WEBHOOK, {
+               const res = await fetch(ENDPOINT, {
                  method : 'POST',
                  headers: { 'Content-Type': 'application/json' },
                  body   : JSON.stringify(payload)
