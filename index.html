@@ -1,553 +1,566 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Custom workflow and email automation scripts for small businesses. Save hours on emails, spreadsheets and data entry—get your free consultation today!">
-      <meta name="keywords" content="workflow automation, email automation, small business automation, spreadsheet scripts, data entry automation">
-      <meta name="robots" content="index,follow">
-      <meta property="og:title" content="Small Business Workflow & Email Automation | HJC Automation">
-      <meta property="og:description" content="Custom workflow & email automation scripts that save your small business hours on manual tasks. Free consultation.">
-      <meta property="og:url" content="https://www.hjcautomation.com/">
-      <meta property="og:type" content="website">
-      <title>Small Business Workflow & Email Automation | HJC Automation</title>
-      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-      <link rel="canonical" href="https://www.hjcautomation.com/">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-      <script src="https://unpkg.com/lucide@latest"></script>
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "HJC Automation",
-        "url": "https://hjcautomation.com/",
-        "logo": "https://hjcautomation.com/images/favicon.ico"
-      }
-      </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom workflow and email automation scripts for small businesses. Save hours on emails, spreadsheets and data entry—get your free consultation today!">
+    <meta name="keywords" content="workflow automation, email automation, small business automation, spreadsheet scripts, data entry automation">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Small Business Workflow & Email Automation | HJC Automation">
+    <meta property="og:description" content="Custom workflow & email automation scripts that save your small business hours on manual tasks. Free consultation.">
+    <meta property="og:url" content="https://www.hjcautomation.com/">
+    <meta property="og:type" content="website">
+    <title>Small Business Workflow & Email Automation | HJC Automation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="canonical" href="https://www.hjcautomation.com/">
 
-      <style>
-         body {
-         font-family: 'Inter', sans-serif;
-         background-color: #f8fafc; /* slate-50 */
-         color: #1e293b; /* slate-800 */
-         }
-         .font-poppins {
-         font-family: 'Poppins', sans-serif;
-         }
-         .gradient-bg {
-         background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.05), transparent 35%),
-         radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.05), transparent 35%);
-         }
-         .content-card {
-         background-color: #ffffff; /* white */
-         border: 1px solid #e2e8f0; /* slate-200 */
-         }
-         .feature-card {
-         background-color: #ffffff; /* white */
-         border: 1px solid #e2e8f0; /* slate-200 */
-         }
-         .feature-card:hover .feature-icon {
-         transform: scale(1.1);
-         box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
-         }
-         .star-gold {
-         color: #FFC107;
-         }
-         /* Add this to your existing 
-      <style>
-         tag or create a new one in the 
-         <head> */
-            .timeline-node {
-            width: 1.25rem; /* 20px */
-            height: 1.25rem; /* 20px */
-            border-width: 3px;
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HJC Automation",
+      "url": "https://hjcautomation.com/",
+      "logo": "https://hjcautomation.com/images/favicon.ico"
+    }
+    </script>
+
+    <!-- Custom CSS for Refinements -->
+    <style>
+        :root {
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
+            --slate-400: #94a3b8;
+            --slate-500: #64748b;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            --blue-500: #3b82f6;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --red-600: #dc2626;
+            --violet-600: #7c3aed;
+            --white: #ffffff;
+            --gold: #FFC107;
+        }
+
+        /* --- Base Styles --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--slate-50);
+            color: var(--slate-700);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Animated Gradient Background --- */
+        .gradient-bg {
+            background: linear-gradient(300deg, #f4f7ff, #f8fafc, #f4f7ff);
+            background-size: 180% 180%;
+            animation: gradient-animation 18s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- Typography --- */
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3 { color: var(--slate-900); }
+        h1 { letter-spacing: -0.025em; }
+        h2, h3 { letter-spacing: -0.02em; }
+        p { line-height: 1.7; }
+        .text-gradient {
+            background-image: linear-gradient(to right, var(--blue-600), var(--violet-600));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* --- Custom Shadows & Borders --- */
+        .card {
+            background-color: var(--white);
+            border: 1px solid var(--slate-200);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.08);
+        }
+
+        /* --- Header Styles --- */
+        #main-header.scrolled {
+            border-bottom-color: var(--slate-200);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+        }
+
+        /* --- Buttons & Links --- */
+        .nav-link { 
+            position: relative;
+            color: var(--slate-600);
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover { color: var(--blue-600); }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--blue-600);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .cta-button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+        }
+        .secondary-button {
+            transition: all 0.3s ease;
+        }
+
+        /* --- Form Styles --- */
+        .form-input {
+            background-color: var(--slate-100);
+            border: 1px solid var(--slate-300);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--blue-500);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        
+        /* --- "How It Works" Timeline --- */
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
             position: absolute;
             left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--slate-200);
             transform: translateX(-50%);
-            background-color: #f8fafc; /* bg-slate-50 */
-            }
-            .timeline-node.top { top: 4rem; }
-            .timeline-node.middle { top: 50%; transform: translate(-50%, -50%);}
-            .timeline-node.bottom { bottom: 4rem; }
-            /* A simple animation for when cards scroll into view */
-            .fade-in-up {
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 2.5rem; /* 40px */
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2.5rem; /* 40px */
+        }
+        .timeline-dot {
+            content: '';
+            position: absolute;
+            top: calc(50% - 10px);
+            width: 20px;
+            height: 20px;
+            border-radius: 9999px;
+            background-color: var(--white);
+            border: 4px solid var(--blue-500);
+            z-index: 10;
+        }
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+        /* --- Animations --- */
+        .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-            .is-visible {
+        }
+        .fade-in-up.is-visible {
             opacity: 1;
             transform: translateY(0);
-            }
-            .nav-link    { @apply text-slate-600 hover:text-blue-600 transition-colors; }
-            .mobile-link { @apply block py-2 px-1 text-slate-600 hover:text-blue-600; }
-      </style>
-   </head>
-      <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQFHV0E61Z"></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-   
-     gtag('config', 'G-NQFHV0E61Z');
-   </script>
-   <body class="gradient-bg">
-      <!-- Header -->
-      <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-md/60 border-b border-slate-200 shadow-sm">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-4">
-          <!-- Brand -->
-          <a href="/" class="text-xl sm:text-2xl font-bold font-poppins text-slate-900">
-            HJC <span class="text-blue-600">Automation</span>
-          </a>
+        }
+    </style>
+</head>
+<body class="gradient-bg">
 
-          <!-- Inline nav  ▶︎  md and up -->
-          <nav class="hidden md:flex items-center gap-x-6 lg:gap-x-8 xl:gap-x-10">
-            <a href="#services"      class="nav-link">Services</a>
-            <a href="#how-it-works"  class="nav-link">How&nbsp;It&nbsp;Works</a>
-            <a href="#testimonials"  class="nav-link">Testimonials</a>
-            <a
-              href="#contact"
-              class="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white
-                     transition-transform duration-300 hover:scale-105 hover:bg-blue-700"
-            >
-              Get&nbsp;a&nbsp;Free&nbsp;Quote
+    <!-- Header -->
+    <header id="main-header" class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-transparent transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+            <!-- Brand -->
+            <a href="/" class="text-2xl font-bold font-poppins text-slate-900">
+                HJC<span class="text-blue-600">Automation</span>
             </a>
-          </nav>
-
-          <!-- Hamburger  ▶︎  below md -->
-          <button id="mobile-menu-button" class="md:hidden">
-            <i data-lucide="menu" class="w-6 h-6 text-slate-800"></i>
-          </button>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-x-8">
+                <a href="#services" class="nav-link text-sm font-medium">Services</a>
+                <a href="#how-it-works" class="nav-link text-sm font-medium">How It Works</a>
+                <a href="#testimonials" class="nav-link text-sm font-medium">Testimonials</a>
+                <a href="#contact" class="cta-button rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700">
+                    Get a Free Quote
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6 text-slate-800"></i>
+            </button>
         </div>
-
-        <!-- Mobile dropdown -->
-        <div
-          id="mobile-menu"
-          class="hidden md:hidden flex flex-col px-4 pt-3 pb-5 space-y-3
-                 bg-white/95 backdrop-blur-md shadow-md"
-        >
-          <a href="#services"     class="mobile-link">Services</a>
-          <a href="#how-it-works" class="mobile-link">How&nbsp;It&nbsp;Works</a>
-          <a href="#testimonials" class="mobile-link">Testimonials</a>
-          <a
-            href="#contact"
-            class="w-full bg-blue-600 text-center text-white font-medium
-                   rounded-lg py-2 hover:bg-blue-700"
-          >
-            Get&nbsp;a&nbsp;Free&nbsp;Quote
-          </a>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col px-4 pt-2 pb-4 space-y-2 bg-white/95 backdrop-blur-lg shadow-lg">
+            <a href="#services" class="block py-2 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-md">Services</a>
+            <a href="#how-it-works" class="block py-2 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-md">How It Works</a>
+            <a href="#testimonials" class="block py-2 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-md">Testimonials</a>
+            <a href="#contact" class="block text-center w-full bg-blue-600 text-white font-medium rounded-lg mt-2 py-2.5 hover:bg-blue-700">
+                Get a Free Quote
+            </a>
         </div>
-      </header>
+    </header>
 
-      <!-- Utility styles (unchanged except extra vertical flex) -->
-      <style>
-        .nav-link    { @apply text-slate-600 hover:text-blue-600 transition-colors; }
-        .mobile-link { @apply block py-2 px-1 text-slate-600 hover:text-blue-600; }
-      </style>
+    <main class="pt-24 sm:pt-28">
 
-
-
-      <!-- Hero Section -->
-      <main class="pt-24">
-         <section class="container mx-auto px-6 py-24 md:py-32 text-center">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-28 md:py-40 text-center">
             <div class="max-w-4xl mx-auto">
-               <h1 class="text-4xl md:text-6xl font-poppins font-bold text-slate-900 leading-tight">
-                  Stop Drowning in Busywork. <br class="hidden md:block">
-                  <span class="block mt-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">Automate Your Workflow.</span>
-               </h1>
-               <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-                  We build custom, no-fuss automation scripts for small businesses. Save countless hours on spreadsheets, emails, and repetitive tasks—no technical expertise required on your end.
-               </p>
-               <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                  <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-blue-500/20">
-                  Automate My Business
-                  </a>
-                  <a href="#how-it-works" class="w-full sm:w-auto border-2 border-slate-300 hover:bg-slate-100 text-slate-700 font-medium py-3 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                  </a>
-               </div>
+                <h1 class="text-4xl md:text-6xl font-poppins font-bold leading-tight">
+                    Stop Drowning in Busywork. <br class="hidden md:block">
+                    <span class="text-gradient block mt-3">Automate Your Workflow.</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                    We build custom, no-fuss automation scripts for small businesses. Save countless hours on spreadsheets, emails, and repetitive tasks—no technical expertise required on your end.
+                </p>
+                <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#contact" class="cta-button w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg">
+                        Automate My Business
+                    </a>
+                    <a href="#how-it-works" class="secondary-button w-full sm:w-auto border-2 border-slate-300 hover:bg-slate-100 hover:border-slate-400 text-slate-700 font-bold py-4 px-8 rounded-lg">
+                        Learn More
+                    </a>
+                </div>
             </div>
-         </section>
-         <!-- Services Section -->
-         <section id="services" class="py-20 bg-white">
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-               <div class="text-center mb-16">
-                  <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Your Personal Tech Department</h2>
-                  <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">We handle the code, you reap the benefits. Here's how we can help:</p>
-               </div>
-               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <!-- Service Card 1 -->
-                  <div class="feature-card p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-2">
-                     <div class="feature-icon bg-slate-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg transition-all duration-300">
-                        <i data-lucide="sheet" class="w-8 h-8"></i>
-                     </div>
-                     <h3 class="text-2xl font-bold font-poppins text-slate-800 mb-3">Spreadsheet Automation</h3>
-                     <p class="text-slate-600">Tired of complex formulas and manual data entry in Excel or Google Sheets? We'll create scripts to sort, filter, format, and generate reports automatically.</p>
-                  </div>
-                  <!-- Service Card 2 -->
-                  <div class="feature-card p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-2">
-                     <div class="feature-icon bg-slate-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg transition-all duration-300">
-                        <i data-lucide="send" class="w-8 h-8"></i>
-                     </div>
-                     <h3 class="text-2xl font-bold font-poppins text-slate-800 mb-3">Email & Outreach</h3>
-                     <p class="text-slate-600">Automate personalized email campaigns, follow-ups, and notifications. Perfect for sales, marketing, and customer service outreach without the manual effort.</p>
-                  </div>
-                  <!-- Service Card 3 -->
-                  <div class="feature-card p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-2">
-                     <div class="feature-icon bg-slate-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg transition-all duration-300">
-                        <i data-lucide="database" class="w-8 h-8"></i>
-                     </div>
-                     <h3 class="text-2xl font-bold font-poppins text-slate-800 mb-3">Data Scraping & Entry</h3>
-                     <p class="text-slate-600">Need to gather information from websites or move data between applications? Our scripts can extract and input data accurately, 24/7.</p>
-                  </div>
-               </div>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold">Your Personal Tech Department</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">We handle the code, you reap the benefits. Here's how we can help:</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Cards -->
+                    <div class="card p-8 rounded-xl text-center">
+                        <div class="inline-flex bg-blue-100 text-blue-600 w-16 h-16 rounded-full items-center justify-center mb-6">
+                            <i data-lucide="sheet" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins mb-3">Spreadsheet Automation</h3>
+                        <p class="text-slate-600">Tired of complex formulas and manual data entry? We'll create scripts to sort, filter, format, and generate reports automatically.</p>
+                    </div>
+                    <div class="card p-8 rounded-xl text-center">
+                        <div class="inline-flex bg-blue-100 text-blue-600 w-16 h-16 rounded-full items-center justify-center mb-6">
+                            <i data-lucide="send" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins mb-3">Email & Outreach</h3>
+                        <p class="text-slate-600">Automate personalized email campaigns, follow-ups, and notifications. Perfect for sales, marketing, and customer service.</p>
+                    </div>
+                    <div class="card p-8 rounded-xl text-center">
+                        <div class="inline-flex bg-blue-100 text-blue-600 w-16 h-16 rounded-full items-center justify-center mb-6">
+                            <i data-lucide="database-zap" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins mb-3">Data Scraping & Entry</h3>
+                        <p class="text-slate-600">Need to gather info from websites or move data between apps? Our scripts can extract and input data accurately, 24/7.</p>
+                    </div>
+                </div>
             </div>
-         </section>
-         <!-- How It Works Section -->
-         <section id="how-it-works" class="py-20">
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-24">
             <div class="container mx-auto px-6">
-               <div class="text-center mb-16">
-                  <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Effortless Automation in 3 Steps</h2>
-                  <p class="mt-4 text-lg text-slate-600">From concept to completion, we make it simple.</p>
-               </div>
-               <div class="relative max-w-4xl mx-auto">
-                  <div class="hidden md:block absolute top-16 left-1/2 w-0.5 h-[calc(100%-8rem)] -translate-x-1/2 bg-slate-200"></div>
-                  <div class="hidden md:block">
-                     <div class="timeline-node top border-blue-500 rounded-full"></div>
-                     <div class="timeline-node middle border-blue-500 rounded-full"></div>
-                     <div class="timeline-node bottom border-blue-500 rounded-full"></div>
-                  </div>
-                  <div class="md:flex items-center justify-start mb-16 relative z-10">
-                     <div class="md:w-1/2 md:pr-8">
-                        <div class="fade-in-up content-card p-8 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:-translate-y-2">
-                           <div class="flex items-start gap-6">
-                              <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center">
-                                 <i data-lucide="message-square-text" class="w-8 h-8"></i>
-                              </div>
-                              <div>
-                                 <span class="font-poppins font-bold text-slate-400">STEP 01</span>
-                                 <h3 class="text-2xl font-poppins font-bold text-slate-800 mt-1 mb-3">Free Consultation</h3>
-                                 <p class="text-slate-600">We'll chat about your current workflow, identify the bottlenecks, and map out a clear automation strategy. No obligations, just solutions.</p>
-                              </div>
-                           </div>
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold">Effortless Automation in 3 Steps</h2>
+                    <p class="mt-4 text-lg text-slate-600">From concept to completion, we make it simple.</p>
+                </div>
+                <div class="hidden md:block timeline-container max-w-4xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="timeline-item mb-16">
+                         <div class="timeline-dot"></div>
+                        <div class="card fade-in-up p-8 rounded-xl">
+                            <div class="flex items-start gap-6">
+                                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"><i data-lucide="message-square-text" class="w-8 h-8"></i></div>
+                                <div>
+                                    <span class="font-poppins font-bold text-slate-400 text-sm">STEP 01</span>
+                                    <h3 class="text-xl font-poppins font-bold mt-1 mb-3">Free Consultation</h3>
+                                    <p class="text-slate-600 text-sm">We'll chat about your current workflow, identify bottlenecks, and map out a clear automation strategy. No obligations, just solutions.</p>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="md:flex items-center justify-end mb-16 relative z-10">
-                     <div class="md:w-1/2 md:pl-8">
-                        <div class="fade-in-up content-card p-8 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:-translate-y-2">
-                           <div class="flex items-start gap-6">
-                              <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center">
-                                 <i data-lucide="code-2" class="w-8 h-8"></i>
-                              </div>
-                              <div>
-                                 <span class="font-poppins font-bold text-slate-400">STEP 02</span>
-                                 <h3 class="text-2xl font-poppins font-bold text-slate-800 mt-1 mb-3">Script Development</h3>
-                                 <p class="text-slate-600">Our developers get to work, coding your custom script. We focus on creating efficient, reliable, and secure code tailored to your exact needs.</p>
-                              </div>
-                           </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-item mb-16">
+                         <div class="timeline-dot"></div>
+                        <div class="card fade-in-up p-8 rounded-xl">
+                            <div class="flex items-start gap-6">
+                                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"><i data-lucide="code-2" class="w-8 h-8"></i></div>
+                                <div>
+                                    <span class="font-poppins font-bold text-slate-400 text-sm">STEP 02</span>
+                                    <h3 class="text-xl font-poppins font-bold mt-1 mb-3">Script Development</h3>
+                                    <p class="text-slate-600 text-sm">Our developers get to work, coding your custom script. We focus on creating efficient, reliable, and secure code tailored to your exact needs.</p>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="md:flex items-center justify-start relative z-10">
-                     <div class="md:w-1/2 md:pr-8">
-                        <div class="fade-in-up content-card p-8 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:-translate-y-2">
-                           <div class="flex items-start gap-6">
-                              <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center">
-                                 <i data-lucide="rocket" class="w-8 h-8"></i>
-                              </div>
-                              <div>
-                                 <span class="font-poppins font-bold text-slate-400">STEP 03</span>
-                                 <h3 class="text-2xl font-poppins font-bold text-slate-800 mt-1 mb-3">Delivery & Support</h3>
-                                 <p class="text-slate-600">We deliver your script, help you implement it, and ensure it runs smoothly. We're here for any questions or future adjustments you may need.</p>
-                              </div>
-                           </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-item">
+                         <div class="timeline-dot"></div>
+                        <div class="card fade-in-up p-8 rounded-xl">
+                            <div class="flex items-start gap-6">
+                                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"><i data-lucide="rocket" class="w-8 h-8"></i></div>
+                                <div>
+                                    <span class="font-poppins font-bold text-slate-400 text-sm">STEP 03</span>
+                                    <h3 class="text-xl font-poppins font-bold mt-1 mb-3">Delivery & Support</h3>
+                                    <p class="text-slate-600 text-sm">We deliver your script, help you implement it, and ensure it runs smoothly. We're here for any questions or future adjustments.</p>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
+                <!-- Mobile How It Works -->
+                <div class="md:hidden space-y-8">
+                     <div class="card p-8 rounded-xl"> <div class="flex items-start gap-6"> <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"><i data-lucide="message-square-text" class="w-8 h-8"></i></div> <div> <span class="font-poppins font-bold text-slate-400 text-sm">STEP 01</span> <h3 class="text-xl font-poppins font-bold mt-1 mb-3">Free Consultation</h3> <p class="text-slate-600 text-sm">We'll chat about your current workflow, identify bottlenecks, and map out a clear automation strategy.</p> </div> </div> </div>
+                     <div class="card p-8 rounded-xl"> <div class="flex items-start gap-6"> <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"><i data-lucide="code-2" class="w-8 h-8"></i></div> <div> <span class="font-poppins font-bold text-slate-400 text-sm">STEP 02</span> <h3 class="text-xl font-poppins font-bold mt-1 mb-3">Script Development</h3> <p class="text-slate-600 text-sm">Our developers get to work, coding your custom script to your exact needs.</p> </div> </div> </div>
+                     <div class="card p-8 rounded-xl"> <div class="flex items-start gap-6"> <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center"><i data-lucide="rocket" class="w-8 h-8"></i></div> <div> <span class="font-poppins font-bold text-slate-400 text-sm">STEP 03</span> <h3 class="text-xl font-poppins font-bold mt-1 mb-3">Delivery & Support</h3> <p class="text-slate-600 text-sm">We deliver your script, help you implement it, and ensure it runs smoothly.</p> </div> </div> </div>
+                </div>
             </div>
-         </section>
-         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                
-            
-                // Other scripts like lucide.createIcons() can also go here
-                // ...
-            });
-         </script>
-         <!-- Testimonials Section -->
-         <section id="testimonials" class="py-20 bg-white">
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-               <div class="text-center mb-16">
-                  <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Loved by Businesses Like Yours</h2>
-                  <p class="mt-4 text-lg text-slate-600">Here's how real‑world owners are using our scripts every day.</p>
-               </div>
-
-               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <!-- Rendezbrew Lattes & More -->
-                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
-                     <div class="flex items-center mb-4">
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                     </div>
-                     <p class="text-slate-600 mb-6 flex-grow">“The menu‑update script posts our daily specials to Instagram while we’re pulling shots—an absolute lifesaver for a one‑truck coffee outfit.”</p>
-                     <div>
-                        <p class="font-bold text-slate-800">Lizzette Valle</p>
-                        <p class="text-sm text-slate-500">Founder, Rendezbrew Lattes & More</p>
-                     </div>
-                  </div>
-
-                  <!-- Abanico Coffee Roasters -->
-                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
-                     <div class="flex items-center mb-4">
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                     </div>
-                     <p class="text-slate-600 mb-6 flex-grow">“Batch‑roast logs now flow straight into Airtable with cupping scores attached. My baristas pull up a profile in seconds.”</p>
-                     <div>
-                        <p class="font-bold text-slate-800">Andrés Suárez</p>
-                        <p class="text-sm text-slate-500">Head Roaster, Abanico Coffee Roasters</p>
-                     </div>
-                  </div>
-
-                  <!-- Fig and Ivy Florals -->
-                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
-                     <div class="flex items-center mb-4">
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                     </div>
-                     <p class="text-slate-600 mb-6 flex-grow">“Wedding confirmations are auto‑emailed with contracts attached—no more 10 p.m. back‑and‑forths.”</p>
-                     <div>
-                        <p class="font-bold text-slate-800">Casey Smith‑Winslow</p>
-                        <p class="text-sm text-slate-500">Owner, Fig and Ivy</p>
-                     </div>
-                  </div>
-
-                  <!-- Enchanted Mirror Grooming -->
-                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
-                     <div class="flex items-center mb-4">
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                     </div>
-                     <p class="text-slate-600 mb-6 flex-grow">“SMS reminders cut our no‑shows in half. The dogs—and our schedule—are happier.”</p>
-                     <div>
-                        <p class="font-bold text-slate-800">Karen Buckley</p>
-                        <p class="text-sm text-slate-500">Owner, Enchanted Mirror Grooming</p>
-                     </div>
-                  </div>
-
-                  <!-- DogFX -->
-                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
-                     <div class="flex items-center mb-4">
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                     </div>
-                     <p class="text-slate-600 mb-6 flex-grow">“Monday‑morning revenue dashboards mean we spend less time crunching numbers and more time cuddling pups.”</p>
-                     <div>
-                        <p class="font-bold text-slate-800">Meagan Rachwal</p>
-                        <p class="text-sm text-slate-500">Co‑Owner, DogFX</p>
-                     </div>
-                  </div>
-
-                  <!-- Bee Kind Bakery & Catering -->
-                  <div class="content-card p-8 rounded-xl flex flex-col shadow-md">
-                     <div class="flex items-center mb-4">
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="star-gold w-5 h-5 fill-current"></i>
-                     </div>
-                     <p class="text-slate-600 mb-6 flex-grow">“Our 4 a.m. purchase‑order generator means flour and butter show up before dawn—so croissants still hit the racks by 7.”</p>
-                     <div>
-                        <p class="font-bold text-slate-800">Shelly Harper</p>
-                        <p class="text-sm text-slate-500">Co‑Founder, Bee Kind Bakery & Catering</p>
-                     </div>
-                  </div>
-               </div>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold">Loved by Businesses Like Yours</h2>
+                    <p class="mt-4 text-lg text-slate-600">Here's how real‑world owners are using our scripts every day.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Cards -->
+                    <div class="card p-8 rounded-xl flex flex-col">
+                        <div class="flex items-center mb-4 text-yellow-400"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                        <p class="text-slate-600 mb-6 flex-grow">“The menu‑update script posts our daily specials to Instagram while we’re pulling shots—an absolute lifesaver for a one‑truck coffee outfit.”</p>
+                        <div><p class="font-bold text-slate-800">Lizzette Valle</p><p class="text-sm text-slate-500">Founder, Rendezbrew Lattes & More</p></div>
+                    </div>
+                    <div class="card p-8 rounded-xl flex flex-col">
+                        <div class="flex items-center mb-4 text-yellow-400"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                        <p class="text-slate-600 mb-6 flex-grow">“Batch‑roast logs now flow straight into Airtable with cupping scores attached. My baristas pull up a profile in seconds.”</p>
+                        <div><p class="font-bold text-slate-800">Andrés Suárez</p><p class="text-sm text-slate-500">Head Roaster, Abanico Coffee Roasters</p></div>
+                    </div>
+                    <div class="card p-8 rounded-xl flex flex-col">
+                        <div class="flex items-center mb-4 text-yellow-400"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                        <p class="text-slate-600 mb-6 flex-grow">“Wedding confirmations are auto‑emailed with contracts attached—no more 10 p.m. back‑and‑forths.”</p>
+                        <div><p class="font-bold text-slate-800">Casey Smith‑Winslow</p><p class="text-sm text-slate-500">Owner, Fig and Ivy</p></div>
+                    </div>
+                </div>
             </div>
-         </section>
-         <!-- Contact Section -->
-         <section id="contact" class="py-20">
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
             <div class="container mx-auto px-6">
-               <div class="bg-white rounded-2xl p-8 md:p-12 lg:p-16 border border-slate-200 shadow-lg">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                     <div>
-                        <h2 class="text-3xl md:text-4xl font-poppins font-bold text-slate-900">Ready to Reclaim Your Time?</h2>
-                        <p class="mt-4 text-lg text-slate-600">Let's talk about how a simple script can transform your business. Fill out the form, and we'll be in touch to schedule your free, no-pressure consultation.</p>
-                        <div class="mt-8 space-y-4">
-                           <div class="flex items-center gap-4">
-                              <i data-lucide="clock" class="w-6 h-6 text-blue-500"></i>
-                              <span class="text-slate-700 font-medium">Save 10-20 hours per week</span>
-                           </div>
-                           <div class="flex items-center gap-4">
-                              <i data-lucide="target" class="w-6 h-6 text-blue-500"></i>
-                              <span class="text-slate-700 font-medium">Eliminate costly data entry errors</span>
-                           </div>
-                           <div class="flex items-center gap-4">
-                              <i data-lucide="zap" class="w-6 h-6 text-blue-500"></i>
-                              <span class="text-slate-700 font-medium">Focus on what truly grows your business</span>
-                           </div>
-                           <!-- Email bullet (add just after the “Focus on what truly grows…” line) -->
-                           <div class="flex items-center gap-4">
-                             <i data-lucide="mail" class="w-6 h-6 text-blue-500"></i>
-                             <a href="mailto:contact@hjcautomation.com"
-                                class="text-slate-700 font-medium hover:underline">
-                                contact@hjcautomation.com
-                             </a>
-                           </div>
+                <div class="bg-white rounded-2xl p-8 md:p-12 lg:p-16 border border-slate-200 shadow-xl shadow-slate-200/50">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-poppins font-bold">Ready to Reclaim Your Time?</h2>
+                            <p class="mt-4 text-lg text-slate-600">Let's talk about how a simple script can transform your business. Fill out the form, and we'll be in touch to schedule your free, no-pressure consultation.</p>
+                            <div class="mt-8 space-y-5">
+                                <div class="flex items-center gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-blue-500"></i><span class="text-slate-700 font-medium">Save 10-20 hours per week</span></div>
+                                <div class="flex items-center gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-blue-500"></i><span class="text-slate-700 font-medium">Eliminate costly data entry errors</span></div>
+                                <div class="flex items-center gap-4"><i data-lucide="check-circle-2" class="w-6 h-6 text-blue-500"></i><span class="text-slate-700 font-medium">Focus on what truly grows your business</span></div>
+                                <div class="flex items-center gap-4 pt-4 border-t border-slate-200">
+                                    <i data-lucide="mail" class="w-6 h-6 text-blue-500"></i>
+                                    <a href="mailto:contact@hjcautomation.com" class="text-slate-700 font-medium hover:underline">contact@hjcautomation.com</a>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                     <form>
-                        <div class="space-y-6">
-                           <div>
-                              <label for="name" class="block text-sm font-medium text-slate-600 mb-2">Full Name</label>
-                              <input type="text" id="name" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="John Doe">
-                           </div>
-                           <div>
-                              <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Email Address</label>
-                              <input type="email" id="email" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="you@company.com">
-                           </div>
-                           <div>
-                              <label for="message" class="block text-sm font-medium text-slate-600 mb-2">How can we help you?</label>
-                              <textarea id="message" rows="4" class="w-full bg-slate-100 border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 'I need to automate a report from an Excel file...'"></textarea>
-                           </div>
-                           <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-blue-500/20">
-                           Request My Free Consultation
-                           </button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
+                        <form id="consultation-form">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-slate-600 mb-2">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-input w-full rounded-lg px-4 py-3 text-slate-900" placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input w-full rounded-lg px-4 py-3 text-slate-900" placeholder="you@company.com" required>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-slate-600 mb-2">How can we help you?</label>
+                                    <textarea id="message" name="message" rows="4" class="form-input w-full rounded-lg px-4 py-3 text-slate-900" placeholder="e.g., 'I need to automate a report from an Excel file...'" required></textarea>
+                                </div>
+                                <button type="submit" class="cta-button w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-lg">
+                                    Request My Free Consultation
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-         </section>
-      </main>
-      <!-- Footer -->
-      <footer class="border-t border-slate-200">
-         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
-            <p>&copy; 2025 HJC Automation. All rights reserved.</p>
-            <p class="text-sm mt-2">Empowering small businesses with technology, one script at a time.</p>
-         </div>
-      </footer>
-      <script>
-         /* Wait until the page DOM is fully parsed */
-         document.addEventListener('DOMContentLoaded', () => {
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <a href="/" class="text-2xl font-bold font-poppins text-slate-900">
+                HJC<span class="text-blue-600">Automation</span>
+            </a>
+            <div class="flex justify-center gap-x-6 my-6">
+                <a href="#services" class="text-sm text-slate-500 hover:text-blue-600 transition">Services</a>
+                <a href="#how-it-works" class="text-sm text-slate-500 hover:text-blue-600 transition">How It Works</a>
+                <a href="#testimonials" class="text-sm text-slate-500 hover:text-blue-600 transition">Testimonials</a>
+                <a href="#contact" class="text-sm text-slate-500 hover:text-blue-600 transition">Contact</a>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2025 HJC Automation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Site-wide JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
 
-            /* ---------- 1. MOBILE MENU TOGGLE ---------- */
-            const menuBtn   = document.getElementById('mobile-menu-button');
+            // --- 1. MOBILE MENU TOGGLE ---
+            const menuBtn = document.getElementById('mobile-menu-button');
             const mobileNav = document.getElementById('mobile-menu');
-
             if (menuBtn && mobileNav) {
-              menuBtn.addEventListener('click', () => {
-                mobileNav.classList.toggle('hidden');                // show / hide menu
-
-                /* (optional) swap menu ↔️ close icon */
-                const iconEl = menuBtn.querySelector('i');
-                if (iconEl) {
-                  iconEl.setAttribute(
-                    'data-lucide',
-                    mobileNav.classList.contains('hidden') ? 'menu' : 'x'
-                  );
-                  lucide.createIcons();                              // re-render the new icon
-                }
-              });
+                menuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileNav.classList.toggle('hidden');
+                    const iconEl = menuBtn.querySelector('i');
+                    if (iconEl) {
+                        iconEl.setAttribute('data-lucide', mobileNav.classList.contains('hidden') ? 'menu' : 'x');
+                        lucide.createIcons();
+                    }
+                });
+                // Close menu when a link is clicked
+                mobileNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.add('hidden');
+                        menuBtn.querySelector('i').setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                    });
+                });
             }
-         
-           const observer = new IntersectionObserver(entries => {
-               entries.forEach(entry => {
-                   if (entry.isIntersecting) {
-                       entry.target.classList.add('is-visible');
-                   }
-               });
-           }, {
-               threshold: 0.1 // Trigger when 10% of the element is visible
-           });
-         
-           // Observe all elements with the .fade-in-up class
-           document.querySelectorAll('.fade-in-up').forEach(element => {
-               observer.observe(element);
-           });
-         
-           /* Grab the consultation form and its fields */
-           const form   = document.querySelector('#contact form');
-           if (!form) return;                                   // safety guard
-           const nameEl = form.querySelector('#name');
-           const mailEl = form.querySelector('#email');
-           const msgEl  = form.querySelector('#message');
-         
-           /* Build a reusable toast element (hidden by default) */
-           const toast = document.createElement('div');
-           toast.className = `
-             fixed bottom-6 right-6 z-50 bg-blue-600 text-white px-5 py-3 rounded-xl
-             shadow-lg opacity-0 pointer-events-none transform translate-y-4
-             transition-all duration-700
-           `.trim();
-           toast.textContent = '✅ Consultation requested! We’ll be in touch shortly.';
-           document.body.appendChild(toast);
-         
-           /* Your Discord channel webhook */
-           const ENDPOINT =
-             'https://gvy72iwrqonh7huqthuninl7ai0fblwp.lambda-url.us-east-2.on.aws/';
-         
-           /* Helper to show / hide the toast with custom text & colour */
-           function showToast(message, bgClass) {
-             toast.textContent = message;
-             toast.classList.remove('bg-blue-600', 'bg-red-600');
-             toast.classList.add(bgClass);
-             toast.classList.remove('opacity-0', 'translate-y-4');
-             toast.classList.add('opacity-100', 'translate-y-0');
-             setTimeout(() => {
-               toast.classList.add('opacity-0', 'translate-y-4');
-             }, 4000);
-           }
-         
-           /* Handle the submission */
-           form.addEventListener('submit', async (ev) => {
-             ev.preventDefault();
-         
-             const payload = {
-               name:    form.elements.name.value.trim(),
-               email:   form.elements.email.value.trim(),
-               message: form.elements.message.value.trim(),
-             };
-         
-             try {
-               const res = await fetch(ENDPOINT, {
-                 method : 'POST',
-                 headers: { 'Content-Type': 'application/json' },
-                 body   : JSON.stringify(payload)
-               });
-         
-               if (!res.ok) throw new Error(`Discord replied ${res.status}`);
-               form.reset();
-               showToast('Consultation requested! We’ll be in touch shortly.', 'bg-blue-600');
-             } catch (err) {
-               console.error(err);
-               showToast('Sorry — something went wrong. Please try again.', 'bg-red-600');
-             }
-           });
-         });
-      </script>
-   </body>
+
+            // --- 2. HEADER SCROLL EFFECT ---
+            const header = document.getElementById('main-header');
+            if(header){
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 20) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            // --- 3. FADE-IN ANIMATION OBSERVER ---
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+
+            // --- 4. CONTACT FORM SUBMISSION ---
+            const form = document.getElementById('consultation-form');
+            if (form) {
+                // Create toast element once and hide it
+                const toast = document.createElement('div');
+                toast.className = `fixed bottom-6 right-6 z-[100] text-white px-5 py-3 rounded-xl shadow-lg opacity-0 pointer-events-none transform translate-y-4 transition-all duration-500`;
+                document.body.appendChild(toast);
+
+                function showToast(message, isSuccess = true) {
+                    toast.textContent = message;
+                    
+                    // FIX: Explicitly remove old colors and add the new one
+                    toast.classList.remove('bg-blue-600', 'bg-red-600');
+                    toast.classList.add(isSuccess ? 'bg-blue-600' : 'bg-red-600');
+                    
+                    // Make the toast visible
+                    toast.classList.remove('opacity-0', 'translate-y-4');
+                    
+                    // Hide it after a delay
+                    setTimeout(() => {
+                        toast.classList.add('opacity-0', 'translate-y-4');
+                    }, 4000);
+                }
+
+                form.addEventListener('submit', async (ev) => {
+                    ev.preventDefault();
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.innerHTML;
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = `<span class="inline-flex items-center gap-2">Sending<svg class="animate-spin -mr-1 ml-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></span>`;
+                    
+                    const ENDPOINT = 'https://gvy72iwrqonh7huqthuninl7ai0fblwp.lambda-url.us-east-2.on.aws/';
+                    
+                    try {
+                        const formData = new FormData(form);
+                        const payload = Object.fromEntries(formData.entries());
+                        
+                        const res = await fetch(ENDPOINT, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!res.ok) throw new Error(`Server responded ${res.status}`);
+                        
+                        form.reset();
+                        showToast('✅ Consultation requested! We’ll be in touch shortly.', true);
+                    } catch (err) {
+                        console.error('Form submission error:', err);
+                        showToast('❌ Sorry, something went wrong. Please try again.', false);
+                    } finally {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
 </html>
